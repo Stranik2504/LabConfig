@@ -1,0 +1,115 @@
+﻿<Window x:Class="LabConfig.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabConfig"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Background="#0c0c0c"
+        Loaded="MainWindow_OnLoaded"
+        SizeChanged="MainWindow_OnSizeChanged">
+    <DockPanel Focusable="False">
+        <DockPanel Focusable="False" DockPanel.Dock="Bottom" Background="#262626">
+            <WrapPanel Focusable="False" DockPanel.Dock="Left">
+                <Label 
+                    Content="👤 root@root" 
+                    VerticalContentAlignment="Center"
+                    Background="#875fd7"
+                    Foreground="Black"
+                    FontFamily="FiraCode NF"
+                    FontSize="13"
+                    Focusable="False"
+                />
+                <Path Focusable="False" Fill="#875fd7" Data="M0,0 L10,13 L0,26z"/>
+            </WrapPanel>
+            <WrapPanel Focusable="False" DockPanel.Dock="Right" Background="#3a3a3a">
+                <Label 
+                    Content="🕘 09:36:13" 
+                    Foreground="#875fd7"
+                    FontFamily="FiraCode NF"   
+                    x:Name="LTime"
+                    FontSize="13"
+                    Focusable="False"
+                />
+                <Path Focusable="False" Fill="#875fd7" Data="M10,0 L0,13 L10,26z"/>
+                <Label 
+                    Content="📅 2024-10-17" 
+                    VerticalContentAlignment="Center"
+                    Background="#875fd7"
+                    Foreground="Black"
+                    FontFamily="FiraCode NF"
+                    FontSize="13"
+                    x:Name="LDate"
+                    Focusable="False"
+                />
+            </WrapPanel>
+            <Label Focusable="False" />
+        </DockPanel>
+        <DockPanel x:Name="DockAllText">
+            <RichTextBox  
+                FontSize="13"
+                IsReadOnly="True" 
+                Background="#0c0c0c"
+                Foreground="#cccccc"
+                FontFamily="FiraCode NF"
+                BorderBrush="Transparent"
+                DockPanel.Dock="Top"
+                x:Name="RtbHistory"
+                TextChanged="RtbHistory_OnTextChanged"
+                Visibility="Collapsed"
+                Focusable="False"
+            />
+            <DockPanel 
+                VerticalAlignment="Top"
+                x:Name="DockInput"
+                Margin="0 0 0 0"
+                Focusable="False"
+            >
+                <Label 
+                    Content="root@root" 
+                    Foreground="#cccccc"
+                    FontFamily="FiraCode NF"
+                    VerticalContentAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="13"
+                    Focusable="False"
+                    Margin="0 0 5 0"
+                />
+                <WrapPanel Focusable="False" VerticalAlignment="Center">
+                    <Path Focusable="False" Fill="#0037da" Data="M0,0 L10,13 L0,26 L10,26 L10,0z"/>
+                    <Label 
+                        Content="~"
+                        Background="#0037da"
+                        Foreground="#0c0c0c"
+                        FontFamily="FiraCode NF"
+                        Margin="-1 0 0 0"
+                        FontSize="13"
+                        Focusable="False"
+                        x:Name="LPath"
+                    />
+                    <Path Focusable="False" Fill="#0037da" Data="M0,0 L10,13 L0,26z"/>
+                </WrapPanel>
+                <TextBox 
+                    BorderBrush="Transparent"
+                    Background="#0c0c0c"
+                    Foreground="#cccccc"
+                    FontFamily="FiraCode NF"
+                    FontSize="13"
+                    VerticalContentAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="10 0 0 0"
+                    x:Name="TbInput"
+                    Focusable="True"
+                    KeyDown="UIElement_OnKeyDown"
+                >
+                    <TextBox.Template>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <ScrollViewer Name="PART_ContentHost"/>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+            </DockPanel>
+        </DockPanel>
+    </DockPanel>
+</Window>
