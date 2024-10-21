@@ -78,6 +78,8 @@ namespace LabConfig
             }
             
             AddNewDockInput();
+            
+            ScrollAllTest.ScrollToEnd();
         }
 
         private void AddNewDockInput()

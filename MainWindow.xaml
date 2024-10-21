@@ -45,7 +45,8 @@
             </WrapPanel>
             <Label Focusable="False" />
         </DockPanel>
-        <StackPanel VerticalAlignment="Top" x:Name="DockAllText">
+        <ScrollViewer x:Name="ScrollAllTest" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel VerticalAlignment="Top" x:Name="DockAllText">
             <Label  
                 FontSize="13"
                 Background="#0c0c0c"
@@ -57,55 +58,6 @@
                 Visibility="Collapsed"
                 Focusable="False"
             />
-            <RichTextBox Visibility="Collapsed" DockPanel.Dock="Top">
-                <FlowDocument>
-                    <Paragraph>
-                        Это первый абзац. Вы можете форматировать текст здесь.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph><Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph><Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph><Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                    <Paragraph>
-                        Это второй абзац. Здесь можно использовать различные стили форматирования.
-                    </Paragraph>
-                </FlowDocument>
-            </RichTextBox>
             <DockPanel 
                 VerticalAlignment="Top"
                 x:Name="DockInput"
@@ -160,5 +112,6 @@
                 </TextBox>
             </DockPanel>
         </StackPanel>
+        </ScrollViewer>
     </DockPanel>
 </Window>
