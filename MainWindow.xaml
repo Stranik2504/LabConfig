@@ -6,9 +6,7 @@
         xmlns:local="clr-namespace:LabConfig"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        Background="#0c0c0c"
-        Loaded="MainWindow_OnLoaded"
-        SizeChanged="MainWindow_OnSizeChanged">
+        Background="#0c0c0c">
     <DockPanel Focusable="False">
         <DockPanel Focusable="False" DockPanel.Dock="Bottom" Background="#262626">
             <WrapPanel Focusable="False" DockPanel.Dock="Left">
@@ -20,6 +18,7 @@
                     FontFamily="FiraCode NF"
                     FontSize="13"
                     Focusable="False"
+                    x:Name="LUserNameBottom"
                 />
                 <Path Focusable="False" Fill="#875fd7" Data="M0,0 L10,13 L0,26z"/>
             </WrapPanel>
@@ -46,25 +45,74 @@
             </WrapPanel>
             <Label Focusable="False" />
         </DockPanel>
-        <DockPanel x:Name="DockAllText">
-            <RichTextBox  
+        <StackPanel VerticalAlignment="Top" x:Name="DockAllText">
+            <Label  
                 FontSize="13"
-                IsReadOnly="True" 
                 Background="#0c0c0c"
                 Foreground="#cccccc"
                 FontFamily="FiraCode NF"
                 BorderBrush="Transparent"
-                DockPanel.Dock="Top"
-                x:Name="RtbHistory"
-                TextChanged="RtbHistory_OnTextChanged"
+                VerticalAlignment="Top"
+                x:Name="LOutput"
                 Visibility="Collapsed"
                 Focusable="False"
             />
+            <RichTextBox Visibility="Collapsed" DockPanel.Dock="Top">
+                <FlowDocument>
+                    <Paragraph>
+                        Это первый абзац. Вы можете форматировать текст здесь.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph><Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph><Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph><Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                    <Paragraph>
+                        Это второй абзац. Здесь можно использовать различные стили форматирования.
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
             <DockPanel 
                 VerticalAlignment="Top"
                 x:Name="DockInput"
                 Margin="0 0 0 0"
                 Focusable="False"
+                Dock="Top"
+                Visibility="Collapsed"
             >
                 <Label 
                     Content="root@root" 
@@ -75,6 +123,7 @@
                     FontSize="13"
                     Focusable="False"
                     Margin="0 0 5 0"
+                    x:Name="LNameUserTop"
                 />
                 <WrapPanel Focusable="False" VerticalAlignment="Center">
                     <Path Focusable="False" Fill="#0037da" Data="M0,0 L10,13 L0,26 L10,26 L10,0z"/>
@@ -110,6 +159,6 @@
                     </TextBox.Template>
                 </TextBox>
             </DockPanel>
-        </DockPanel>
+        </StackPanel>
     </DockPanel>
 </Window>

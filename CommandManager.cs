@@ -5,15 +5,21 @@ namespace LabConfig;
 public static class CommandManager
 {
     private const int CountUsers = 1;
-    
+
+    public static string NameUser { get; private set; }
+
     public static event Action Close;
     public static event Action<string> ChangeDir;
+    public static event Action<string> SetNewNameUser;
 
     private static DateTime _startTime;
+    
+    public static void SetStartTime(DateTime time) => _startTime = time;
 
-    static CommandManager()
+    public static void SetNameUser(string nameUser)
     {
-        _startTime = DateTime.Now;
+        NameUser = nameUser;
+        SetNewNameUser?.Invoke(nameUser);
     }
     
     public static string Execute(string command)
@@ -23,18 +29,22 @@ public static class CommandManager
             Close?.Invoke();
             return string.Empty;
         }
-        
+
         if (command.StartsWith("uptime"))
-        {
-            
-        }
+            return UptimeCommand(command);
         
         return "command not found: " + command;
     }
 
     public static string UptimeCommand(string command)
     {
+        if (command.Contains("-p") || command.Contains("--pretty"))
+            return UptimePretty(command);
+
+        if (command.Contains("-s") || command.Contains("--since"))
+            return UptimeSince(command);
         
+        return UptimeCommon(command);
     }
 
     private static string UptimeCommon(string command)
@@ -84,6 +94,6 @@ public static class CommandManager
 
     private static string UptimeSince(string command)
     {
-        
+        return DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
     }
 }
