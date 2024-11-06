@@ -47,71 +47,87 @@
         </DockPanel>
         <ScrollViewer x:Name="ScrollAllTest" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
             <StackPanel VerticalAlignment="Top" x:Name="DockAllText">
-            <Label  
-                FontSize="13"
-                Background="#0c0c0c"
-                Foreground="#cccccc"
-                FontFamily="FiraCode NF"
-                BorderBrush="Transparent"
-                VerticalAlignment="Top"
-                x:Name="LOutput"
-                Visibility="Collapsed"
-                Focusable="False"
-            />
-            <DockPanel 
-                VerticalAlignment="Top"
-                x:Name="DockInput"
-                Margin="0 0 0 0"
-                Focusable="False"
-                Dock="Top"
-                Visibility="Collapsed"
-            >
-                <Label 
-                    Content="root@root" 
-                    Foreground="#cccccc"
-                    FontFamily="FiraCode NF"
-                    VerticalContentAlignment="Center"
-                    VerticalAlignment="Center"
+                <TextBlock  
                     FontSize="13"
-                    Focusable="False"
-                    Margin="0 0 5 0"
-                    x:Name="LNameUserTop"
-                />
-                <WrapPanel Focusable="False" VerticalAlignment="Center">
-                    <Path Focusable="False" Fill="#0037da" Data="M0,0 L10,13 L0,26 L10,26 L10,0z"/>
-                    <Label 
-                        Content="~"
-                        Background="#0037da"
-                        Foreground="#0c0c0c"
-                        FontFamily="FiraCode NF"
-                        Margin="-1 0 0 0"
-                        FontSize="13"
-                        Focusable="False"
-                        x:Name="LPath"
-                    />
-                    <Path Focusable="False" Fill="#0037da" Data="M0,0 L10,13 L0,26z"/>
-                </WrapPanel>
-                <TextBox 
-                    BorderBrush="Transparent"
                     Background="#0c0c0c"
                     Foreground="#cccccc"
                     FontFamily="FiraCode NF"
-                    FontSize="13"
-                    VerticalContentAlignment="Center"
-                    VerticalAlignment="Center"
-                    Margin="10 0 0 0"
-                    x:Name="TbInput"
-                    Focusable="True"
-                    KeyDown="UIElement_OnKeyDown"
+                    VerticalAlignment="Top"
+                    x:Name="TbOutput"
+                    TextWrapping="Wrap"
+                    Visibility="Collapsed"
+                    Focusable="False"
+                />
+                <DockPanel 
+                    VerticalAlignment="Top"
+                    x:Name="DockInput"
+                    Margin="0 0 0 0"
+                    Focusable="False"
+                    Dock="Top"
+                    Visibility="Collapsed"
                 >
-                    <TextBox.Template>
-                        <ControlTemplate TargetType="{x:Type TextBox}">
-                            <ScrollViewer Name="PART_ContentHost"/>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
-            </DockPanel>
-        </StackPanel>
+                    <Label 
+                        Content="root@root" 
+                        Foreground="#cccccc"
+                        FontFamily="FiraCode NF"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Focusable="False"
+                        Margin="0 0 5 0"
+                        x:Name="LNameUserTop"
+                    />
+                    <WrapPanel Focusable="False" VerticalAlignment="Center">
+                        <Path Focusable="False" Fill="#0037da" Data="M0,0 L10,13 L0,26 L10,26 L10,0z"/>
+                        <Label 
+                            Content="~"
+                            Background="#0037da"
+                            Foreground="#0c0c0c"
+                            FontFamily="FiraCode NF"
+                            Margin="-1 0 0 0"
+                            FontSize="13"
+                            Focusable="False"
+                            x:Name="LPath"
+                        />
+                        <Path Focusable="False" Fill="#0037da" Data="M0,0 L10,13 L0,26z"/>
+                    </WrapPanel>
+                    <TextBox 
+                        BorderBrush="Transparent"
+                        Background="#0c0c0c"
+                        Foreground="#cccccc"
+                        FontFamily="FiraCode NF"
+                        FontSize="13"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="10 0 0 0"
+                        x:Name="TbInput"
+                        Focusable="True"
+                        KeyDown="UIElement_OnKeyDown"
+                    >
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <ScrollViewer Name="PART_ContentHost"/>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                </DockPanel>
+                <DockPanel
+                    Visibility="Collapsed"
+                    x:Name="DpInputText"
+                >
+                    <RichTextBox 
+                        BorderBrush="Transparent"
+                        Background="#0c0c0c"
+                        Foreground="#cccccc"
+                        FontFamily="FiraCode NF"
+                        FontSize="13"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Focusable="True"
+                    />
+                </DockPanel>
+            </StackPanel>
         </ScrollViewer>
     </DockPanel>
 </Window>
