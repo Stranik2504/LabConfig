@@ -11,7 +11,7 @@ public static class CommandManager
 {
     private const int CountUsers = 1;
 
-    public static string? NameUser { get; set; }
+    public static string? NameUser { get; private set; }
     public static string? PathArchive { get; set; }
 
     public static string CurrDir { get; private set; } = "/";
@@ -24,9 +24,15 @@ public static class CommandManager
     
     public static void SetStartTime(DateTime time) => _startTime = time;
     
+    public static void SetNameUser(string name)
+    {
+        NameUser = name;
+        SetNewNameUser?.Invoke(name);
+    }
+    
     public static string Execute(string command)
     {
-        if (command == "exit")
+        if (command.StartsWith("exit"))
         {
             Close?.Invoke();
             return string.Empty;
@@ -93,6 +99,9 @@ public static class CommandManager
             
         if (uptime.Days > 0)
             timeup = uptime.Days + " days" + (string.IsNullOrWhiteSpace(timeup) ? "" : " ") + timeup;
+
+        if (string.IsNullOrWhiteSpace(timeup))
+            timeup = "0 sec";
             
         return 
             DateTime.Now.ToString("HH:mm:ss") + 
@@ -117,6 +126,9 @@ public static class CommandManager
             
         if (uptime.Days > 0)
             timeup = uptime.Days + " days" + (string.IsNullOrWhiteSpace(timeup) ? "" : " ") + timeup;
+        
+        if (string.IsNullOrWhiteSpace(timeup))
+            timeup = "0 sec";
             
         return 
             "up " + timeup;
@@ -267,7 +279,7 @@ public static class CommandManager
 
     public static string LsCommonCommandString(string command)
     {
-        return LsCommonCommand(command.Remove(0, 2)).Aggregate("", (result, item) => result + item.name + "  ");
+        return LsCommonCommand(command.Remove(0, 2)).Aggregate("", (result, item) => result + item.name + "  ").TrimEnd();
     }
     
     public static string LsLongCommandString(string command)
@@ -275,7 +287,7 @@ public static class CommandManager
         return LsLongCommand(command
             .Replace("ls -l", "")
             .Replace("ls --long", "")
-        ).Aggregate("", (result, item) => result + (item.isDir ? "d" : "-") + item.name + "  ");
+        ).Aggregate("", (result, item) => result + (item.isDir ? "d" : "-") + item.name + "  ").TrimEnd();
     }
 
     public static List<(bool isDir, string name)> LsCommand(string command)

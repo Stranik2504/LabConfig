@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using Mono.Options;
 
 namespace LabConfig
 {
@@ -28,7 +30,7 @@ namespace LabConfig
         public MainWindow()
         {
             InitializeComponent();
-            
+
             var dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += (_, _) =>
             {
@@ -74,11 +76,45 @@ namespace LabConfig
             };
             
             CommandManager.SetStartTime(DateTime.Now);
-            
-            // TODO: Parse from args
-            CommandManager.NameUser = "root";
-            CommandManager.PathArchive = "C:\\Users\\rund2\\Downloads\\archive.zip";
 
+            var startScript = string.Empty;
+            
+            new OptionSet()
+            {
+                { "u|user=", "Set the user name", CommandManager.SetNameUser },
+                { "p|path=", "Set the path archive", v => CommandManager.PathArchive = v },
+                { "s|start=", "Set the path to start script", v => startScript = v }
+            }.Parse(Environment.GetCommandLineArgs());
+            
+            try
+            {
+                if (!string.IsNullOrEmpty(startScript) && File.Exists(startScript))
+                {
+                    foreach (var command in File.ReadAllLines(startScript))
+                    {
+                        var result = CommandManager.Execute(command);
+                        if (string.IsNullOrEmpty(result)) continue;
+                        
+                        var tbOutput = CloneTextBlock(TbOutput);
+
+                        if (tbOutput == null) continue;
+                        tbOutput.Visibility = Visibility.Visible;
+                        tbOutput.Text = result;
+                
+                        DockAllText.Children.Add(tbOutput);
+                        DockPanel.SetDock(tbOutput, Dock.Top);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                File.WriteAllText("error.log", e.ToString());
+                throw;
+            }
+            
+            if (string.IsNullOrWhiteSpace(CommandManager.NameUser))
+                CommandManager.SetNameUser("root");
+            
             AddNewDockInput();
         }
 

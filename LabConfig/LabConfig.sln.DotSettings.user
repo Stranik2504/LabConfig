@@ -1,0 +1,34 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005Crund2_005COneDrive_005C_0414_043E_043A_0443_043C_0435_043D_0442_044B_005CProgramming_005CLabConfig_005Cbin_005CDebug_005Cnet6_002E0_002Dwindows_005CLabConfig_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AApplication_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F4844a8dfac63029693b1698ff696628150a4bdeb4d84f622f1fa180fdca89_003FApplication_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASafeFileHandle_002EWindows_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Ff3b9684f72bc2cc435eb694f7cc86eca8c240d2d1cefa1e8697a61f1f2f27f_003FSafeFileHandle_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AString_002EManipulation_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fe7e231682be8652744726acc6de35323daa68061429db55e0c251114902f60_003FString_002EManipulation_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AThrowHelper_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651_003FThrowHelper_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AWrapPanel_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F275ccad6d0bb60cd3fab36ff521b90e22ec923d1657ec75a6e115d316ee4c_003FWrapPanel_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AXamlReader_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F8e7818d69af0b1b92bcd15bf7fdba9cb7c12e450fec5ff4f7be0d132fa883c_003FXamlReader_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\rund2\AppData\Local\JetBrains\Rider2024.2\resharper-host\temp\Rider\vAny\CoverageData\_LabConfig.-743212824\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=af6df795_002D2829_002D4aaa_002D9dab_002Db3a5d7a867cc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.UptimeTests.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.UptimeTests.Test2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.UptimeTests.Test3&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.UptimeTests.Test4&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.WhoTests.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.WhoTests.Test2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.WhoTests.Test3&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.WcCommand.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.WcCommand.Test2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.WcCommand.Test3&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.WcTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.CdTests.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.CdTests.Test2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.CdTests.Test3&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.LsTests.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.LsTests.Test2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.LsTests.Test3&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.ExitTests.Test2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.ExitTests.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.ExitTests.Test3&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::AE09F190-C845-442F-9118-CD8BB667B2DC::net6.0-windows::LabConfigTest.CdTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
