@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphDependencies", "GraphDependencies.csproj", "{3605A640-2917-4374-932D-3A8FF6AEAED8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphDependenciesTests", "..\GraphDependenciesTests\GraphDependenciesTests.csproj", "{596AD892-6F4D-4CB4-9625-DAF017F2E811}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3605A640-2917-4374-932D-3A8FF6AEAED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3605A640-2917-4374-932D-3A8FF6AEAED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3605A640-2917-4374-932D-3A8FF6AEAED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3605A640-2917-4374-932D-3A8FF6AEAED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596AD892-6F4D-4CB4-9625-DAF017F2E811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596AD892-6F4D-4CB4-9625-DAF017F2E811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596AD892-6F4D-4CB4-9625-DAF017F2E811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596AD892-6F4D-4CB4-9625-DAF017F2E811}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
