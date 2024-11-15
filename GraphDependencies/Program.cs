@@ -13,7 +13,7 @@ namespace GraphDependencies;
 
 internal class Program
 {
-    private const bool IsDebug = true;
+    private const bool IsDebug = false;
     
     public static async Task Main(string[] args)
     {
@@ -21,13 +21,15 @@ internal class Program
         var namePackage = string.Empty;
         var maxDepthRecursion = 0;
         var urlRepository = string.Empty;
+        var saveImage = false;
         
         new OptionSet()
         {
             { "p|path=", "Set the path to visualizator", v => pathVisualizator = v },
             { "n|name=", "Set the name package", v => namePackage = v },
             { "d|depth=", "Set the max depth recursion", (int v) => maxDepthRecursion = v },
-            { "u|url=", "Set the url repository", v => urlRepository = v }
+            { "u|url=", "Set the url repository", v => urlRepository = v },
+            { "s|save=", "Need to save image", (bool v) => saveImage = v }
         }.Parse(args);
         
         if (IsDebug)
@@ -103,7 +105,7 @@ internal class Program
         
         process.Close();
 
-        if (IsDebug)
+        if (IsDebug || saveImage)
         {
             await using var fileStream = new FileStream("output.png", FileMode.Create, FileAccess.Write);
             await memoryStream.CopyToAsync(fileStream);
