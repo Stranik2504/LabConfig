@@ -6,7 +6,7 @@ namespace GraphDependenciesTests;
 public class UnitTest1
 {
     [Fact]
-    public async Task Test1()
+    public async Task TestFindPackageUrl()
     {
         var res = await GraphDependencies.GraphDependencies.FindPackageUrl(
             "http://archive.ubuntu.com/ubuntu/ubuntu/dists/noble/main/"
@@ -16,7 +16,7 @@ public class UnitTest1
     }
     
     [Fact]
-    public async Task Test2()
+    public async Task TestGetAllPackages()
     {
         var res = await GraphDependencies.GraphDependencies.GetAllPackages(
             "http://archive.ubuntu.com/ubuntu/ubuntu/dists/noble/main/binary-amd64/Packages.gz"
@@ -26,7 +26,7 @@ public class UnitTest1
     }
     
     [Fact]
-    public void Test3()
+    public void TestGetPackageByName()
     {
         var list = new List<Package>()
         {
@@ -84,7 +84,7 @@ public class UnitTest1
     }
     
     [Fact]
-    public void Test4()
+    public void TestGetDependenciesRecursive()
     {
         var list = new List<Package>()
         {
@@ -155,7 +155,7 @@ public class UnitTest1
     }
     
     [Fact]
-    public void Test5()
+    public void TestGetDependenciesRecursive2()
     {
         var list = new List<Package>()
         {
